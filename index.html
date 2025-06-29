@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish TDT Streaming</title>
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 data-i18n="title">Spanish TDT Streaming</h1>
+            <div class="controls">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="light-icon">🌞</span>
+                    <span class="dark-icon">🌙</span>
+                </button>
+                <select class="language-switcher">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="player-container hidden">
+            <video id="main-player" class="video-js vjs-fluid"></video>
+            <button class="close-player" data-i18n="close">Close</button>
+        </section>
+
+        <section class="channel-grid">
+            <!-- Dynamically populated -->
+        </section>
+    </main>
+
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
