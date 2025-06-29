@@ -88,12 +88,30 @@ class ChannelManager {
 
     async loadChannels() {
         try {
-            const response = await fetch('https://www.tdtchannels.com/lists/tv.json');
+            const response = await fetch('https://www.tdtchannels.com/lists/tv.json', {
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            
             const channels = await response.json();
+            
+            // Validate channel data structure
+            if (!Array.isArray(channels)) throw new Error('Invalid channel data format');
+            
             this.renderChannels(channels);
         } catch (error) {
-            console.error('Error loading channels:', error);
-            this.grid.innerHTML = '<p data-i18n="error-loading">Error loading channels</p>';
+            console.error('Channel loading error:', error);
+            this.grid.innerHTML = `
+                <div class="error-message">
+                    <p data-i18n="error-loading">Error loading channels</p>
+                    <p data-i18n="try-again">Try again later</p>
+                </div>
+            `;
         }
     }
 

@@ -8,4 +8,4 @@
   [headers.values]
     Access-Control-Allow-Origin = "*"
     X-Frame-Options = "DENY"
-    Content-Security-Policy = "default-src 'self' https://www.tdtchannels.com https://vjs.zencdn.net; script-src 'self' https://vjs.zencdn.net; style-src 'self' https://vjs.zencdn.net 'unsafe-inline'; img-src 'self' data:;"
+    Content-Security-Policy = "default-src 'self' https://www.tdtchannels.com https://vjs.zencdn.net; connect-src 'self' https://www.tdtchannels.com; script-src 'self' https://vjs.zencdn.net; style-src 'self' https://vjs.zencdn.net 'unsafe-inline'; img-src 'self' data:;"

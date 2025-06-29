@@ -143,3 +143,19 @@ header .controls {
     max-width: 1000px;
     height: 70vh;
 }
+
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-color);
+}
+
+.error-message p {
+    margin: 1rem 0;
+    color: #dc3545;
+}
+
+.error-message p[data-i18n="try-again"] {
+    color: var(--text-color);
+    opacity: 0.8;
+}
