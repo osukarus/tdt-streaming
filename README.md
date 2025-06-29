@@ -33,14 +33,13 @@ open http://localhost:8000
 ## Deployment
 
 ### Netlify
-1. Push to GitHub repository  
-2. Create new site in Netlify  
-3. Connect GitHub repository  
-4. Set build command: `npm install -g serve && serve -s .`  
-5. Set publish directory: `.`  
-6. Deploy!  
+1. Push repository to GitHub  
+2. Click the Deploy button below  
+3. Netlify will automatically detect `netlify.toml` config  
+4. No build command needed - it's preconfigured  
+5. Site will deploy from `tdt-streaming` directory  
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/tdt-streaming)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/osukarus/tdt-streaming)
 
 ## Technology Stack
 - **Frontend**: Vanilla HTML/CSS/JavaScript  
