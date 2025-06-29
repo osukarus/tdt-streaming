@@ -1,3 +1,8 @@
+[build]
+  base = "tdt-streaming"
+  publish = "tdt-streaming"
+  command = "echo 'No build needed'"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
